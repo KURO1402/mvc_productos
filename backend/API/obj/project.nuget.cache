@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOSN9Ru3Z9k=",
+  "dgSpecHash": "SBlRIHW3rKc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.12\\microsoft.aspnetcore.openapi.9.0.12.nupkg.sha512",

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\obj\\",
         "projectStyle": "PackageReference",

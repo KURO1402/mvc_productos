@@ -11,3 +11,16 @@ C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria
 C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\SistemaVentas\Model\obj\Debug\net9.0\refint\Model.dll
 C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\SistemaVentas\Model\obj\Debug\net9.0\Model.pdb
 C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\SistemaVentas\Model\obj\Debug\net9.0\ref\Model.dll
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\bin\Debug\net9.0\Model.deps.json
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\bin\Debug\net9.0\Model.dll
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\bin\Debug\net9.0\Model.pdb
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.sourcelink.json
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.dll
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\refint\Model.dll
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\Model.pdb
+C:\Users\Usuario\OneDrive\Documentos\ICONTINENTAL\QUINTO CICLO 2026-1\Ingenieria web\mvc_productos\backend\Model\obj\Debug\net9.0\ref\Model.dll

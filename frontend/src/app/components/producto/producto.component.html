@@ -1,0 +1,94 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Gestión de Productos</h2>
+
+  <!-- Formulario -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>{{ modoEdicion ? 'Editar Producto' : 'Nuevo Producto' }}</h5>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="guardar()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="productoForm.nombre" name="nombre" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Categoría</label>
+            <select class="form-select" [(ngModel)]="productoForm.idCategoria" name="idCategoria" required>
+              <option value="0" disabled>Seleccione una categoría</option>
+              <option *ngFor="let cat of categorias" [value]="cat.idCategoria">{{ cat.nombre }}</option>
+            </select>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label class="form-label">Precio</label>
+            <input type="number" class="form-control" [(ngModel)]="productoForm.precio" name="precio" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label class="form-label">Stock</label>
+            <input type="number" class="form-control" [(ngModel)]="productoForm.stock" name="stock" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label class="form-label">Estado</label>
+            <select class="form-select" [(ngModel)]="productoForm.estado" name="estado">
+              <option value="A">Activo</option>
+              <option value="I">Inactivo</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary">
+            {{ modoEdicion ? 'Actualizar' : 'Guardar' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Buscador -->
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Buscar por nombre..."
+      [(ngModel)]="busqueda" (input)="filtrar()" name="busqueda">
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of productosFiltrados; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.nombreCategoria }}</td>
+          <td>S/ {{ p.precio | number:'1.2-2' }}</td>
+          <td>{{ p.stock }}</td>
+          <td>
+            <span class="badge" [ngClass]="p.estado === 'A' ? 'bg-success' : 'bg-danger'">
+              {{ p.estado === 'A' ? 'Activo' : 'Inactivo' }}
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editar(p)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="eliminar(p.idProducto)">Eliminar</button>
+          </td>
+        </tr>
+        <tr *ngIf="productosFiltrados.length === 0">
+          <td colspan="7" class="text-center">No se encontraron productos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -724,9 +724,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Repository\\obj\\",
       "projectStyle": "PackageReference",
@@ -749,8 +749,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\BACKEND\\Model\\Model.csproj"
+            "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ICONTINENTAL\\QUINTO CICLO 2026-1\\Ingenieria web\\mvc_productos\\backend\\Model\\Model.csproj"
             }
           }
         }
