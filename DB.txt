@@ -1,0 +1,25 @@
+CREATE DATABASE sistema_ventas;
+USE sistema_ventas;
+
+CREATE TABLE categoria (
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE producto (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    id_categoria INT NOT NULL,
+    
+    nombre VARCHAR(150) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    estado CHAR(1) NOT NULL DEFAULT 'A',
+    
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT fk_producto_categoria
+        FOREIGN KEY (id_categoria)
+        REFERENCES categoria(id_categoria)
+        ON UPDATE CASCADE
+        ON DELETE RESTRICT
+);
