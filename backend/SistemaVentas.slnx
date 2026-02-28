@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/01 API/">
+    <Project Path="API/API.csproj" />
+  </Folder>
+  <Folder Name="/02 BUSINESS/">
+    <Project Path="Business/Business.csproj" />
+  </Folder>
+  <Folder Name="/03 REPOSITORY/">
+    <Project Path="Repository/Repository.csproj" />
+  </Folder>
+  <Folder Name="/04 MODEL/">
+    <Project Path="Model/Model.csproj" />
+  </Folder>
+</Solution>

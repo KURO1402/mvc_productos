@@ -23,3 +23,7 @@ CREATE TABLE producto (
         ON UPDATE CASCADE
         ON DELETE RESTRICT
 );
+
+INSERT INTO categoria (nombre) VALUES ('Electrónica');
+INSERT INTO categoria (nombre) VALUES ('Ropa');
+INSERT INTO categoria (nombre) VALUES ('Alimentos');
