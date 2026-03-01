@@ -24,6 +24,12 @@ CREATE TABLE producto (
         ON DELETE RESTRICT
 );
 
+INSERT INTO producto (id_categoria, nombre, precio, stock, estado) VALUES (1, 'Laptop HP 15', 2500.00, 10, 'A');
+INSERT INTO producto (id_categoria, nombre, precio, stock, estado) VALUES (1, 'Auriculares Sony', 150.00, 25, 'A');
+INSERT INTO producto (id_categoria, nombre, precio, stock, estado) VALUES (2, 'Polo Adidas', 80.00, 50, 'A');
+INSERT INTO producto (id_categoria, nombre, precio, stock, estado) VALUES (2, 'Jeans Levis', 120.00, 30, 'I');
+INSERT INTO producto (id_categoria, nombre, precio, stock, estado) VALUES (3, 'Arroz Costeño 5kg', 25.00, 100, 'A');
+
 INSERT INTO categoria (nombre) VALUES ('Electrónica');
 INSERT INTO categoria (nombre) VALUES ('Ropa');
 INSERT INTO categoria (nombre) VALUES ('Alimentos');

@@ -37,10 +37,11 @@
           </div>
         </div>
         <div class="d-flex gap-2">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" [disabled]="guardando">
+            <span *ngIf="guardando" class="spinner-border spinner-border-sm me-1"></span>
             {{ modoEdicion ? 'Actualizar' : 'Guardar' }}
           </button>
-          <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()">
+          <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()" [disabled]="guardando">
             Cancelar
           </button>
         </div>
@@ -54,8 +55,16 @@
       [(ngModel)]="busqueda" (input)="filtrar()" name="busqueda">
   </div>
 
+  <!-- Spinner de carga -->
+  <div *ngIf="cargando" class="text-center my-4">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+    <p class="mt-2 text-muted">Cargando productos...</p>
+  </div>
+
   <!-- Tabla -->
-  <div class="table-responsive">
+  <div class="table-responsive" *ngIf="!cargando">
     <table class="table table-bordered table-hover">
       <thead class="table-dark">
         <tr>
@@ -81,8 +90,8 @@
             </span>
           </td>
           <td>
-            <button class="btn btn-warning btn-sm me-2" (click)="editar(p)">Editar</button>
-            <button class="btn btn-danger btn-sm" (click)="eliminar(p.idProducto)">Eliminar</button>
+            <button class="btn btn-warning btn-sm me-2" (click)="editar(p)" [disabled]="guardando">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="eliminar(p.idProducto)" [disabled]="cargando">Eliminar</button>
           </td>
         </tr>
         <tr *ngIf="productosFiltrados.length === 0">

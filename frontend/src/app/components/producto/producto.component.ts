@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Producto } from '../../models/producto.model';
 import { Categoria } from '../../models/categoria.model';
 import { ProductoService } from '../../services/producto.service';
@@ -17,6 +17,8 @@ export class ProductoComponent implements OnInit {
   productosFiltrados: Producto[] = [];
   busqueda: string = '';
   modoEdicion: boolean = false;
+  cargando: boolean = false;
+  guardando: boolean = false;
 
   productoForm: Producto = {
     idProducto: 0,
@@ -29,7 +31,8 @@ export class ProductoComponent implements OnInit {
 
   constructor(
     private productoService: ProductoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -38,15 +41,26 @@ export class ProductoComponent implements OnInit {
   }
 
   cargarProductos(): void {
-    this.productoService.getAll().subscribe(data => {
-      this.productos = data;
-      this.productosFiltrados = data;
+    this.cargando = true;
+    this.productoService.getAll().subscribe({
+      next: (data) => {
+        this.productos = data;
+        this.productosFiltrados = data;
+        this.cargando = false;
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.cargando = false;
+        this.cdr.detectChanges();
+      }
     });
   }
 
   cargarCategorias(): void {
-    this.categoriaService.getAll().subscribe(data => {
-      this.categorias = data;
+    this.categoriaService.getAll().subscribe({
+      next: (data) => {
+        this.categorias = data;
+      }
     });
   }
 
@@ -74,23 +88,52 @@ export class ProductoComponent implements OnInit {
   }
 
   guardar(): void {
+    if (this.guardando) return;
+    this.guardando = true;
+
+    this.productoForm.idCategoria = Number(this.productoForm.idCategoria);
+    this.productoForm.precio = Number(this.productoForm.precio);
+    this.productoForm.stock = Number(this.productoForm.stock);
+
     if (this.modoEdicion) {
-      this.productoService.update(this.productoForm).subscribe(() => {
-        this.cargarProductos();
-        this.limpiarFormulario();
+      this.productoService.update(this.productoForm).subscribe({
+        next: () => {
+          console.log('actualizado');
+          this.cargarProductos();
+          this.limpiarFormulario();
+          this.guardando = false;
+        },
+        error: (err) => {
+          console.log('error', err);
+          this.guardando = false;
+        }
       });
     } else {
-      this.productoService.create(this.productoForm).subscribe(() => {
-        this.cargarProductos();
-        this.limpiarFormulario();
+      this.productoService.create(this.productoForm).subscribe({
+        next: () => {
+          console.log('creado');
+          this.cargarProductos();
+          this.limpiarFormulario();
+          this.guardando = false;
+        },
+        error: (err) => {
+          console.log('error', err);
+          this.guardando = false;
+        }
       });
     }
   }
 
   eliminar(id: number): void {
     if (confirm('¿Estás seguro de eliminar este producto?')) {
-      this.productoService.delete(id).subscribe(() => {
-        this.cargarProductos();
+      this.cargando = true;
+      this.productoService.delete(id).subscribe({
+        next: () => {
+          this.cargarProductos();
+        },
+        error: () => {
+          this.cargando = false;
+        }
       });
     }
   }
